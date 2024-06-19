@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BiseshRana.com</title>
+        <style>
+            .all
+            {
+                background-color: rgba(0, 0, 0, 0.71);
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                top: 0;
+                display: grid;
+                grid-template-rows: 60px 1fr;
+            }
+            .topBar
+            {
+                background-color: lightblue;
+                align-content: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                background-color: rgba(0, 0, 0, 0.168);
+            }
+            .middleTB
+            {
+                text-align: center;
+                align-content: center;
+            }
+            .endTB
+            {
+                margin-right: 15px;
+                align-content: center;
+                display: grid;
+                grid-template-columns: 1fr 50px ;
+            }
+            .biseshRana
+            {
+                font-weight: bold;
+                font-size: 25px;
+                background-color:rgba(0, 0, 0, 0);
+                border-width: 0;
+                font-family:'Trebuchet MS';
+                color: black;
+            }
+            .projects, .aboutMe, .art, .contact
+            {
+                color: black;
+                font-weight: bold;
+                background-color: rgba(0,0,0,0);
+                border-width: 0;
+                font-size: 15px;
+            }
+            .liImage
+            {
+                height: 35px;
+                width: 35px;
+                object-fit: contain;
+            }
+            .ghImage
+            {
+                height: 55px;
+                width: 50px;
+                object-fit: contain;
+            }
+            .ghImageButton, .liImageButton, .ghLink, .liLink
+            {
+                background-color: rgba(0, 0, 0, 0);
+                border-width: 0;
+                align-content: center;
+                text-align: end;
+            }
+            .startTB
+            {
+                margin-left: 15px;
+                align-content: center;
+            }
+            .mainContent
+            {
+                text-align: center;
+                align-content: center;
+            }
+            .intro
+            {
+                color: white;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="all">
+
+            <div class="topBar">
+                <div class="startTB">
+                    <button class="biseshRana"> Bisesh Rana </button>
+                </div>
+                <div class="middleTB">
+                    <button class="projects">Projects</button>
+                    <button class="aboutMe">About Me</button>
+                    <button class="art">Art</button>
+                    <button class="contact">Contact</button>
+                </div>
+                <div class="endTB">
+                    <a class="ghLink"href="https://github.com/biseshRana" target="blank">
+                        <button class="ghImageButton">
+                            <img class="ghImage"src="Github-Logo-Transparent-Background-PNG.png">
+                        </button>
+                    </a>
+                    <a class="liLink"href="https://www.linkedin.com/feed/" target="_blank">
+                        <button class="liImageButton">
+                            <img class="liImage"
+                            src="linkedin-png-linkedin-icon-1600.webp">
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="mainContent">
+                <div class="intro">
+                    Hello, my name is Bisesh Rana.<br> Welcome to my world.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
