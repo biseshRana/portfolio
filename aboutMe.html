@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .everything
+            {
+                background-color: rgba(0, 0, 0, 0.71);
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                top: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                overflow: scroll;
+            }
+            .wordsDiv
+            {
+                background-color: rgba(0,0,0, 0.168);
+                text-align: center;
+                align-content: center;
+            }
+            .words, .background, .contact
+            {
+                font-family: 'Trebuchet MS';
+                border: solid;
+                border-color: lightblue;
+                border-radius: 60px;
+                margin-left: 50px;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                color: rgba(245, 245, 245, 0.912);
+                width: 500px;
+                height: 170px;
+                text-align: center;
+            }
+            .title
+            {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .me
+            {
+                height: 500px;
+                width: 375px;
+                object-fit: contain;
+                border: solid;
+                border-width: 5px;
+                border-radius: 100px;
+                border-color: lightblue;
+                margin-left: 50px;
+            }
+            .meDiv
+            {
+                align-content: center;
+                text-align: center;
+                background-color: rgba(0,0,0, 0.168); 
+            }
+            .contacts
+            {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                align-content: center;
+                margin-top: 30px;
+            }
+            .row1,.row2
+            {
+                margin-bottom: 20px;
+            }
+            .column1,.column2
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-content: center;
+                
+            }
+            .bruhR
+            {
+               font-size: 20px;
+               text-align: start;
+            }
+            .bruhL
+            {
+                font-size: 20px;
+                text-align: end;
+            }
+            .resumeIcon
+            {
+                object-fit: contain;
+                height: 20px;
+                width: 20px;
+                filter: invert(100%);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="everything">
+            
+            <div class="meDiv">
+                <img class="me" src="images/biseshRana.JPG">
+            </div>
+            <div class="wordsDiv">
+                <div class="words">
+                    <div class="title">Introduction:</div>
+                    Hi! It's nice to meet you. My name is Bisesh Rana and I am a sophmore CS major at UNT. In my free time I enjoy hanging out with my brother, playing final fantasy, or working out. My favorite anime is One Piece and I have very strong arguments on how is the best anime to ever exist.
+                </div>
+                <div class="background">
+                    <div class="title">Background and Goals:</div>
+                    Growing up, I was raised in Nepal, before I finally came to America by the age of 5. Since then I have traveled to and from Nepal every year, furthering my connection to my culture and other cultures across the world. Because of this phenomenal experience, I have made it one of my life goals to make global transportation more efficient and available to minorities across the world.
+                </div>
+                <div class= contact>
+                    <div class="title"> Contact Information: </div>
+                    <div class="contacts">
+                        <div class="row1">
+                            <div class="column1">
+                                <div class="bruhL">
+                                    <img class="resumeIcon" src="images/resumeIcon.png">
+                                    Resume
+                                </div>
+                                <div class="bruhR">
+                                    <img class="resumeIcon" src="images/email-icon-clipart-transparent-1.png">
+                                    Email
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="column2">
+                                <div class="bruhL">
+                                    <img class="resumeIcon" src="images/linkedin-png-linkedin-icon-1600.webp">
+                                    LinkedIn
+                                </div>
+                                <div class="bruhR">
+                                    <img class="resumeIcon" src="images/Github-Logo-Transparent-Background-PNG.png">
+                                    Github
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
