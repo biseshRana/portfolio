@@ -50,14 +50,15 @@
                 margin-right: 30px;
                 margin-bottom: 30px;
                 background-color: pink;
-                border-color: black
+                border-color: black;
             }
             .description
             {
                 margin-left: 20px;
                 word-break: break-word;
-                overflow: hidden;
+                overflow: scroll;
                 height: 200px;
+                min-width: 200px;
             }
             .image
             {
@@ -80,6 +81,27 @@
                 object-fit: contain;
                 height: 100%;
                 width: 100%;
+            }
+            .imageDiv
+            {
+                position: relative;
+            }
+            .hi
+            {
+                z-index: 10;
+                margin-top: 20px;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                height: 30px;
+                width: 30px;
+                border-radius: 15px;
+            }
+            .video
+            {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
             }
         </style>
     </head>
@@ -110,6 +132,20 @@
                     `;
                 });
             });
+            document.querySelectorAll('.hi').forEach((hi) => 
+            {
+                hi.addEventListener('click', () => 
+                {
+                    document.querySelector('.demoPlayer').innerHTML=
+                    `
+                        <video controls class="video" src="${hi.dataset.projectVideo}"></video>
+                    ` 
+                });
+            });
+            //changes to add:
+            /*
+                1) remove scroll bars when screen is full screen
+            */
         </script>
     </body>
 </html>

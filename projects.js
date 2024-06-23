@@ -8,7 +8,8 @@ export function bruh()
             projectsHTML += 
             `
                 <div class="container">
-                    <div class="imageDiv">
+                    <div class="imageDiv imageDiv+${project.nameProject}">
+                        <button class="hi" data-project-video="${project.video}"> hi </button>
                         <img class="image" src="${project.image}"
                         data-project-id="${project.image}"
                         >
