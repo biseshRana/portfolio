@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="topBar.css">
         <style>
-            .everything
+            .everythingOG
             {
+                display: grid;
+                grid-template-rows: 61px 1fr;
                 background-color: rgba(0, 0, 0, 0.71);
                 height: 100%;
                 width: 100%;
                 position: fixed;
                 left: 0;
                 top: 0;
+            }
+            .everything
+            {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 overflow: scroll;
+                background-color: rgba(0, 0, 0, 0.71);
             }
             .wordsDiv
             {
@@ -97,44 +104,58 @@
         </style>
     </head>
     <body>
-        <div class="everything">
-            
-            <div class="meDiv">
-                <img class="me" src="images/biseshRana.JPG">
+        <div class="everythingOG">
+            <div class="tabBar">
+                <div id="topBarContainer"></div>
+                <script>
+                    fetch('topBar.html')
+                    .then(response => response.text())
+                    .then(data => 
+                    {
+                        document.getElementById('topBarContainer').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading topBar:', error));
+                </script>
             </div>
-            <div class="wordsDiv">
-                <div class="words">
-                    <div class="title">Introduction:</div>
-                    Hi! It's nice to meet you. My name is Bisesh Rana and I am a sophmore CS major at UNT. In my free time I enjoy hanging out with my brother, playing final fantasy, or working out. My favorite anime is One Piece and I have very strong arguments on how is the best anime to ever exist.
+            <div class="everything">
+            
+                <div class="meDiv">
+                    <img class="me" src="images/biseshRana.JPG">
                 </div>
-                <div class="background">
-                    <div class="title">Background and Goals:</div>
-                    Growing up, I was raised in Nepal, before I finally came to America by the age of 5. Since then I have traveled to and from Nepal every year, furthering my connection to my culture and other cultures across the world. Because of this phenomenal experience, I have made it one of my life goals to make global transportation more efficient and available to minorities across the world.
-                </div>
-                <div class= contact>
-                    <div class="title"> Contact Information: </div>
-                    <div class="contacts">
-                        <div class="row1">
-                            <div class="column1">
-                                <div class="bruhL">
-                                    <img class="resumeIcon" src="images/resumeIcon.png">
-                                    Resume
-                                </div>
-                                <div class="bruhR">
-                                    <img class="resumeIcon" src="images/email-icon-clipart-transparent-1.png">
-                                    Email
+                <div class="wordsDiv">
+                    <div class="words">
+                        <div class="title">Introduction:</div>
+                        Hi! It's nice to meet you. My name is Bisesh Rana and I am a sophmore CS major at UNT. In my free time I enjoy hanging out with my brother, playing final fantasy, or working out. My favorite anime is One Piece and I have very strong arguments on how is the best anime to ever exist.
+                    </div>
+                    <div class="background">
+                        <div class="title">Background and Goals:</div>
+                        Growing up, I was raised in Nepal, before I finally came to America by the age of 5. Since then I have traveled to and from Nepal every year, furthering my connection to my culture and other cultures across the world. Because of this phenomenal experience, I have made it one of my life goals to make global transportation more efficient and available to minorities across the world.
+                    </div>
+                    <div class= contact>
+                        <div class="title"> Contact Information: </div>
+                        <div class="contacts">
+                            <div class="row1">
+                                <div class="column1">
+                                    <div class="bruhL">
+                                        <img class="resumeIcon" src="images/resumeIcon.png">
+                                        Resume
+                                    </div>
+                                    <div class="bruhR">
+                                        <img class="resumeIcon" src="images/email-icon-clipart-transparent-1.png">
+                                        Email
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row2">
-                            <div class="column2">
-                                <div class="bruhL">
-                                    <img class="resumeIcon" src="images/linkedin-png-linkedin-icon-1600.webp">
-                                    LinkedIn
-                                </div>
-                                <div class="bruhR">
-                                    <img class="resumeIcon" src="images/Github-Logo-Transparent-Background-PNG.png">
-                                    Github
+                            <div class="row2">
+                                <div class="column2">
+                                    <div class="bruhL">
+                                        <img class="resumeIcon" src="images/linkedin-png-linkedin-icon-1600.webp">
+                                        LinkedIn
+                                    </div>
+                                    <div class="bruhR">
+                                        <img class="resumeIcon" src="images/Github-Logo-Transparent-Background-PNG.png">
+                                        Github
+                                    </div>
                                 </div>
                             </div>
                         </div>

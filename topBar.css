@@ -1,0 +1,61 @@
+.topBar
+{
+    background-color: lightblue;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(0, 0, 0, 0.168);
+}
+.middleTB
+{
+    text-align: center;
+    align-content: center;
+}
+.endTB
+{
+    margin-right: 15px;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 50px ;
+}
+.biseshRana
+{
+    font-weight: bold;
+    font-size: 25px;
+    background-color:rgba(0, 0, 0, 0);
+    border-width: 0;
+    font-family:'Trebuchet MS';
+    color: black;
+}
+.projectz, .aboutMe, .art
+{
+    color: black;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0);
+    border-width: 0;
+    font-size: 15px;
+}
+.liImage
+{
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+}
+.ghImage
+{
+    height: 55px;
+    width: 50px;
+    object-fit: contain;
+}
+.ghImageButton, .liImageButton, .ghLink, .liLink
+{
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    align-content: center;
+    text-align: end;
+}
+.startTB
+{
+    margin-left: 15px;
+    align-content: center;
+}

@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="topBar.css">
         <style>
-            .all
+            .everythingOG
             {
-                background-color: rgba(0, 0, 0, 0.596);
+                display: grid;
+                grid-template-rows: 61px 1fr;
+                background-color: rgba(0, 0, 0, 0.71);
                 height: 100%;
                 width: 100%;
                 position: fixed;
                 left: 0;
                 top: 0;
+            }
+            .all
+            {
+                background-color: rgba(0, 0, 0, 0.596);
                 display: grid;
                 grid-template-columns: 500px 1fr;
                 overflow: scroll;
@@ -106,16 +113,30 @@
         </style>
     </head>
     <body>
-        <div class="all">
-            <div class="demoPlayer">
-                
+        <div class="everythingOG">
+            <div class="tabBar">
+                <div id="topBarContainer"></div>
+                <script>
+                    fetch('topBar.html')
+                    .then(response => response.text())
+                    .then(data => 
+                    {
+                        document.getElementById('topBarContainer').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading topBar:', error));
+                </script>
             </div>
-            <div class="projects">
-                <div class="title">
-                    Projects: 
+            <div class="all">
+                <div class="demoPlayer">
+                    
                 </div>
-                <div class="list">
-
+                <div class="projects">
+                    <div class="title">
+                        Projects: 
+                    </div>
+                    <div class="list">
+    
+                    </div>
                 </div>
             </div>
         </div>
