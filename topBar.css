@@ -21,7 +21,7 @@
 .biseshRana
 {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
     background-color:rgba(0, 0, 0, 0);
     border-width: 0;
     font-family:'Trebuchet MS';
@@ -33,7 +33,11 @@
     font-weight: bold;
     background-color: rgba(0,0,0,0);
     border-width: 0;
-    font-size: 15px;
+    font-size: 20px;
+}
+.projectz:hover, .aboutMe:hover, .art:hover, .biseshRana:hover
+{
+    color: white;
 }
 .liImage
 {
@@ -46,6 +50,10 @@
     height: 55px;
     width: 50px;
     object-fit: contain;
+}
+.liImage:hover, .ghImage:hover
+{
+    filter: invert(100%);
 }
 .ghImageButton, .liImageButton, .ghLink, .liLink
 {

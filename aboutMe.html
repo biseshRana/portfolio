@@ -68,39 +68,76 @@
             .contacts
             {
                 display: grid;
-                grid-template-rows: 1fr 1fr;
+                grid-template-rows: 30px 30px;
+                row-gap: 20px;
                 align-content: center;
+                text-align: center;
                 margin-top: 30px;
             }
             .row1,.row2
             {
-                margin-bottom: 20px;
+                align-content: center;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                display: grid;
+                grid-template-columns: 120px 120px;
+                column-gap: 20px;
             }
             .column1,.column2
             {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 150px 150px;
                 align-content: center;
-                
+                text-align: center;
             }
-            .bruhR
+            .bruhR, .bruhL
             {
                font-size: 20px;
-               text-align: start;
+               align-content: center;
+               color: white;
+               cursor: pointer;
             }
-            .bruhL
-            {
-                font-size: 20px;
-                text-align: end;
-            }
+            
             .resumeIcon
             {
-                object-fit: contain;
+                object-fit: cover;
                 height: 20px;
                 width: 20px;
                 filter: invert(100%);
             }
-            
+            .emailIcon
+            {
+                height: 25px;
+                width: 25px;
+            }
+            .bruhRR
+            {
+                font-size: 20px;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                color: white;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .tooltip
+            {
+                visibility: hidden;
+                width: 120px;
+                font-size: 15px;
+                background-color:rgba(0, 0, 0, 0);
+                text-align: center;
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+                margin-right: 20px;
+            }
+            .bruhRR:hover .tooltip
+            {
+                visibility: visible;
+                opacity: 1;
+            }
         </style>
     </head>
     <body>
@@ -135,33 +172,54 @@
                         <div class="title"> Contact Information: </div>
                         <div class="contacts">
                             <div class="row1">
-                                <div class="column1">
-                                    <div class="bruhL">
-                                        <img class="resumeIcon" src="images/resumeIcon.png">
-                                        Resume
-                                    </div>
+                                    <a style="text-decoration: none;" target="_blank" href="https://docs.google.com/document/d/1kpGWYVJV6P0agYXLY2DHxX4mL5SdZV1ag-xGKYWaFbQ/edit?usp=sharing">
+                                        <div class="bruhL">
+                                            <img class="resumeIcon" src="images/resumeIcon.png">
+                                            Resume
+                                        </div>
+                                    </a>
                                     <div class="bruhR">
-                                        <img class="resumeIcon" src="images/email-icon-clipart-transparent-1.png">
-                                        Email
+                                        <img class="resumeIcon emailIcon" src="images/emailIcon.jpg">
+                                        <button class="bruhRR">
+                                            <div class="tooltip"> RanaBisesh123@gmail.com</div>
+                                            Email</button>
                                     </div>
-                                </div>
                             </div>
                             <div class="row2">
-                                <div class="column2">
-                                    <div class="bruhL">
-                                        <img class="resumeIcon" src="images/linkedin-png-linkedin-icon-1600.webp">
-                                        LinkedIn
-                                    </div>
-                                    <div class="bruhR">
-                                        <img class="resumeIcon" src="images/Github-Logo-Transparent-Background-PNG.png">
-                                        Github
-                                    </div>
-                                </div>
+                                    <a style="text-decoration: none;" target="_blank" href="https://www.linkedin.com/in/bisesh-rana-3aa508252/">
+                                        <div class="bruhL">
+                                            <img class="resumeIcon" src="images/linkedin-png-linkedin-icon-1600.webp">
+                                            LinkedIn
+                                        </div>
+                                    </a>
+                                    <a style="text-decoration: none;" target="_blank" href="https://github.com/biseshRana">
+                                        <div class="bruhR">
+                                            <img class="resumeIcon" src="images/Github-Logo-Transparent-Background-PNG.png">
+                                            Github
+                                        </div>
+                                    </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            document.querySelector('.bruhRR').addEventListener('mouseover', () => 
+            {
+                document.querySelector('.tooltip').style.visibility='visible';
+                document.querySelector('.bruhRR').style.visibility = 'hidden';
+            })
+            document.querySelector('.bruhRR').addEventListener('mouseout', () => 
+            {
+                document.querySelector('.tooltip').style.visibility='hidden';
+                document.querySelector('.bruhRR').style.visibility = 'visible';
+            })
+            document.querySelector('.tooltip').addEventListener('click', () => 
+            {
+                document.querySelector('.tooltip').style.visibility='visible';
+                document.querySelector('.tooltip').style.opacity=1;
+            })
+        </script>
     </body>
 </html>

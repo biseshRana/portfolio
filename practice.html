@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Website</title>
-    <link rel="stylesheet" href="topBar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Example</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Adjust this to move the tooltip up or down */
+            left: 50%;
+            margin-left: -60px; /* Use half of the width to center align */
+
+            /* Fade in tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <div id="topBarContainer"></div>
-
-    <script>
-        // JavaScript to load the topBar HTML content
-        fetch('topBar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('topBarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading topBar:', error));
-    </script>
-
+    <div class="tooltip">Hover over me
+        <div class="tooltiptext">Tooltip text</div>
+    </div>
 </body>
 </html>

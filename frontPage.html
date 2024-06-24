@@ -37,7 +37,7 @@
             .biseshRana
             {
                 font-weight: bold;
-                font-size: 25px;
+                font-size: 30px;
                 background-color:rgba(0, 0, 0, 0);
                 border-width: 0;
                 font-family:'Trebuchet MS';
@@ -49,7 +49,7 @@
                 font-weight: bold;
                 background-color: rgba(0,0,0,0);
                 border-width: 0;
-                font-size: 15px;
+                font-size: 20px;
             }
             .liImage
             {
@@ -70,6 +70,14 @@
                 align-content: center;
                 text-align: end;
             }
+            .projects:hover, .aboutMe:hover, .art:hover, .biseshRana:hover
+            {
+                color: white;
+            }
+            .liImage:hover, .ghImage:hover
+            {
+                filter: invert(100%);
+            }
             .startTB
             {
                 margin-left: 15px;
@@ -79,6 +87,7 @@
             {
                 text-align: center;
                 align-content: center;
+                background-color: rgba(0, 0, 0, 0.71);
             }
             .intro
             {
@@ -92,11 +101,17 @@
 
             <div class="topBar">
                 <div class="startTB">
-                    <button class="biseshRana"> Bisesh Rana </button>
+                    <a style="text-decoration: none;" href="frontPage.html">
+                        <button class="biseshRana"> Bisesh Rana </button>
+                    </a>
                 </div>
                 <div class="middleTB">
-                    <button class="projects">Projects</button>
-                    <button class="aboutMe">About Me</button>
+                    <a style="text-decoration: none;" href="projects.html">
+                        <button class="projects">Projects</button>
+                    </a>
+                    <a style="text-decoration: none;" href="aboutMe.html">
+                        <button class="aboutMe">About Me</button>
+                    </a>
                     <button class="art">Art</button>
                 </div>
                 <div class="endTB">
