@@ -7,5 +7,5 @@ This portfolio was coded with HTML, CSS, and JavaScript. The portfolio consists 
 
 ## Running the code
 There are two ways to run the code:
-1) Click on the following link: [https://biseshrana.github.io/Rock-Paper-Scissors-Game/](https://biseshrana.github.io/portfolio/frontPage.html)
+1) Click on the following link: [https://biseshrana.github.io/portfolio/](https://biseshrana.github.io/portfolio/frontPage.html)
 2) Open the code in VSCode, and open a live server using a browser of your choice through the index.html file
